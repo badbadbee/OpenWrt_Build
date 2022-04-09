@@ -17,10 +17,6 @@ sed -i "s/hostname='.*'/hostname='LMFAO'/g" package/base-files/files/bin/config_
 ##加入作者信息
 sed -i "s/DISTRIB_REVISION='*.*'/DISTRIB_REVISION='$(date +%Y%m%d) Build'/g" package/base-files/files/etc/openwrt_release
 
-## Autocore
-rm -rf feeds/xiangfeidexiaohuo/patch/autocore
-svn export https://github.com/xiangfeidexiaohuo/other-package/trunk/autocore feeds/xiangfeidexiaohuo/patch/autocore
-
 
 ##
 svn export https://github.com/coolsnowwolf/luci/trunk/libs/luci-lib-fs feeds/luci/libs/luci-lib-fs
